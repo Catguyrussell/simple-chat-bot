@@ -1,0 +1,28 @@
+import random
+
+# List of greetings and responses
+greetings = ["hello", "hi", "hey", "greetings", "howdy"]
+random_greeting = random.choice(greetings)
+
+# List of questions and responses
+questions = ["how are you?", "how are you doing?", "what's up?"]
+random_question = random.choice(questions)
+
+# List of generic responses
+responses = ["Nice to meet you!", "I'm doing well, thank you!", "Not much.", "I'm a chatbot, so I don't have feelings."]
+
+# Main conversation loop
+while True:
+    user_input = input("User: ").lower()
+    
+    # Check for greetings
+    if user_input in greetings:
+        print("Bot: " + random_greeting)
+    
+    # Check for questions
+    elif "?" in user_input:
+        print("Bot: " + random_question)
+    
+    # Generate a random response
+    else:
+        print("Bot: " + random.choice(responses))
